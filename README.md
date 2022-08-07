@@ -1,6 +1,7 @@
 # Node Demo Project
 
 ## EventEmitter
+***
 
 ## Module
 * 一個 Node.js 文件就是一個模塊，這個文件可能是JavaScript 代碼、JSON 或者編譯過的C/C++ 擴展
@@ -11,6 +12,19 @@
   * require 方法中的文件查找策略
     * 文件模塊
     * 原生模塊
+***
+
+## Node.js Stream
+* Readable
+* Writable 
+* Duplex
+* Transform 
+### 所有的 Stream 對象都是 EventEmitter 的實例。常用的 _事件_ 有：
+* data - 當有數據可讀時觸發
+* end - 沒有更多的數據可讀時觸發
+* error - 在接收和寫入過程中發生錯誤時觸發
+* finish - 所有數據已被寫入到底層系統時觸發
+***
 
 
 ## Node.js 全局對象
@@ -39,11 +53,13 @@
     * 只有當第一個參數為false，才會輸出第二個參數，否則不會有任何結果
   * process
     * 描述當前Node.js 進程狀態的對象，提供了一個與*操作系統*的簡單接口
+***
 
 ## child_process
 * child_process.exec 使用子進程執行命令，緩存子進程的輸出，並將子進程的輸出以回調函數參數的形式返回
 * child_process.spawn 使用指定的命令行參數創建新進程
 * child_process.fork 是 spawn()的特殊形式，用於在子進程中運行的模塊，如 fork('./son.js') 相當於 spawn('node', ['./son.js']) 。與spawn方法不同的是，fork會在父進程與子進程之間，建立一個*通信管道*，用於進程之間的通信
+***
 
 ## Node.js 工具模塊
 * Node.js OS 
